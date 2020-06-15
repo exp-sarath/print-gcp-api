@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="width: 85%; margin: 0 7.5%;">
+        <div style="text-align: center; padding-left: 50px;">
+            <h1>This is heading 1</h1>
+            <h2>This is heading 2</h2>
+            <h3>This is heading 3</h3>
+            <h4>This is heading 4</h4>
+            <h5>This is heading 5</h5>
+            <h6>This is heading 6</h6>
+            <h3>Invoice</h5>
+                <%= date %>
+                <%= name %>
+                <table>
+                    <% if (items.length > 0) { %>
+                    <% items.forEach(item => {%>
+                    <tr>
+                        <td><%= item.name %></td>
+                        <td><%= item.qty %></td>
+                        <td><%= item.price %></td>
+                    </tr>
+                    <%  });%>
+                    <% }%>
+                </table>
+        </div>
+    </div>
+</body>
+
+</html>
